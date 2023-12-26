@@ -9,7 +9,7 @@ parted /dev/nvme0n1 mkpart primary ext4 512MB 100%
 #CRIANDO TABELA DE PARTIÇÃO PARA DISCO 2
 parted /dev/nvme1n1 mklabel gpt
 #CRIANDO PARTIÇÃO QUE VAI SER A HOME
-parted /dev/nvme1n1 makpart primary ext4 0% 100%
+parted /dev/nvme1n1 mkpart primary ext4 0% 100%
 #CONFERINDO PARTIÇÕES
 clear
 parted /dev/nvme0n1 print
