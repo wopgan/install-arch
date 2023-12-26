@@ -74,6 +74,3 @@ mkinitcpio -P
 EOF
 umount -R /mnt
 reboot
-
-
-#https://telegram.org/dl/desktop/linux
