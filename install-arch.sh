@@ -57,7 +57,7 @@ pacman -Syu
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=arch --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 yes | pacman -S plasma-wayland-session dolphin dolphin-plugins kfind konsole spectacle gwenview kate print-manager cups system-config-printer
-yes | pacman -S gvfs gvfs-smb cifs-utils power-profiles-daemon powerdevil plasma-systemmonitor kcalc krita discover fileligh ksystemlog kgpg partitionmanager skanlite kmousetool kcharselect krdc kompare sweeper
+yes | pacman -S gvfs gvfs-smb power-profiles-daemon kcalc krita filelight ksystemlog kgpg partitionmanager skanlite kmousetool kcharselect krdc kompare sweeper
 yes | pacman -S kamoso kdf kcachegrind krfb kbackup kwallet5 kwalletmanager kdeconnect firefox firefox-i18n-pt-br gst-plugin-va gst-plugins-bad docker docker-compose vlc qbittorrent
 yes | pacman -S unrar unzip p7zip mesa intel-media-driver lm_sensors i2c-tools libvdpau-va-gl libva-vdpau-driver libva-utils vdpauinfo vulkan-intel mesa-utils ntfs-3g dosfstools exfat-utils btrfs-progs tailscale zerotier-one git wget curl 
 echo "export LIBVA_DRIVER_NAME=iHD" >> /etc/environment
