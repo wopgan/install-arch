@@ -69,7 +69,7 @@ ln -sf /opt/VSCode-linux-x64/bin/code /usr/bin/code
 echo "auth            optional        pam_kwallet5.so" >> /etc/pam.d/sddm
 echo "session         optional        pam_kwallet5.so auto_start" >> /etc/pam.d/sddm
 gpasswd -a sylvio docker
-systemctl enable sddm NetworkManager docker
+systemctl enable sddm NetworkManager docker bluetooth
 mkinitcpio -P
 EOF
 umount -R /mnt
