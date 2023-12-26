@@ -59,7 +59,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 yes | pacman -S plasma-wayland-session dolphin dolphin-plugins kfind konsole spectacle gwenview kate print-manager cups system-config-printer
 yes | pacman -S gvfs gvfs-smb power-profiles-daemon kcalc krita filelight ksystemlog kgpg partitionmanager skanlite kmousetool kcharselect krdc kompare sweeper
 yes | pacman -S kamoso kdf kcachegrind krfb kbackup kwallet5 kwalletmanager kdeconnect firefox firefox-i18n-pt-br gst-plugin-va gst-plugins-bad docker docker-compose vlc qbittorrent
-yes | pacman -S unrar unzip p7zip mesa intel-media-driver lm_sensors i2c-tools libvdpau-va-gl libva-vdpau-driver libva-utils vdpauinfo vulkan-intel mesa-utils ntfs-3g dosfstools exfat-utils btrfs-progs tailscale zerotier-one git wget curl 
+yes | pacman -S unrar unzip p7zip mesa ark intel-media-driver lm_sensors i2c-tools libvdpau-va-gl libva-vdpau-driver libva-utils vdpauinfo vulkan-intel mesa-utils ntfs-3g dosfstools exfat-utils btrfs-progs tailscale zerotier-one git wget curl 
 echo "export LIBVA_DRIVER_NAME=iHD" >> /etc/environment
 echo "export VDPAU_DRIVER=va_gl" >> /etc/environment
 wget https://telegram.org/dl/desktop/linux -O /tmp/tsetup.tar.xg && tar xJf /tmp/tsetup.tar.xg -C /opt/
