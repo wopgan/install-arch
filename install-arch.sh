@@ -36,7 +36,7 @@ pacstrap /mnt base base-devel vim grub intel-ucode linux linux-firmware linux-he
 genfstab -U /mnt >> /mnt/etc/fstab
 #POS INSTALL
 arch-chroot /mnt <<EOF
-ln -sf /usr/share/zoneinfo/America/Sao_Paulo
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
 sed -i '/^#.*pt_BR.UTF-8/s/^#//' /etc/locale.gen
 locale-gen
