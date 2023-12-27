@@ -56,10 +56,11 @@ sed -i '/^#.*ParallelDownloads/s/^#//' /etc/pacman.conf
 pacman -Syu
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=arch --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
-yes | pacman -S plasma-wayland-session dolphin dolphin-plugins kfind konsole spectacle gwenview kate print-manager cups system-config-printer
-yes | pacman -S gvfs gvfs-smb power-profiles-daemon kcalc krita filelight ksystemlog kgpg partitionmanager skanlite kmousetool kcharselect krdc kompare sweeper
+yes | pacman -S plasma-wayland-session dolphin dolphin-plugins kfind konsole spectacle gwenview kate print-manager cups system-config-printer virtualbox virtualbox-host-modules-arch
+yes | pacman -S gvfs gvfs-smb power-profiles-daemon kcalc krita filelight ksystemlog kgpg partitionmanager skanlite kmousetool kcharselect krdc kompare sweeper acpid hplip
 yes | pacman -S kamoso kdf kcachegrind krfb kbackup kwallet5 kwalletmanager kdeconnect firefox firefox-i18n-pt-br gst-plugin-va gst-plugins-bad docker docker-compose vlc qbittorrent
 yes | pacman -S unrar unzip p7zip mesa ark intel-media-driver lm_sensors i2c-tools libvdpau-va-gl libva-vdpau-driver libva-utils vdpauinfo vulkan-intel mesa-utils ntfs-3g dosfstools exfat-utils btrfs-progs tailscale zerotier-one git wget curl 
+yes | pacman -S 
 echo "export LIBVA_DRIVER_NAME=iHD" >> /etc/environment
 echo "export VDPAU_DRIVER=va_gl" >> /etc/environment
 wget https://telegram.org/dl/desktop/linux -O /tmp/tsetup.tar.xg && tar xJf /tmp/tsetup.tar.xg -C /opt/
@@ -69,7 +70,7 @@ ln -sf /opt/VSCode-linux-x64/bin/code /usr/bin/code
 echo "auth            optional        pam_kwallet5.so" >> /etc/pam.d/sddm
 echo "session         optional        pam_kwallet5.so auto_start" >> /etc/pam.d/sddm
 gpasswd -a sylvio docker
-systemctl enable sddm NetworkManager docker bluetooth
+systemctl enable sddm NetworkManager docker bluetooth acpid cups
 mkinitcpio -P
 EOF
 umount -R /mnt
